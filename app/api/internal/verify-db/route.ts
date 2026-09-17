@@ -49,15 +49,13 @@ export async function POST(request: Request) {
   };
 
   try {
-    // Run Migrations
-    results.migrations = execSync('npm run db:migrate', { encoding: 'utf-8', stdio: 'pipe' });
+    results.migrations = execSync('npx -y drizzle-kit migrate', { encoding: 'utf-8', stdio: 'pipe' });
   } catch (err: any) {
     results.migrationsError = err.message + '\n' + err.stdout + '\n' + err.stderr;
   }
 
   try {
-    // Run Seed
-    results.seed = execSync('npm run db:seed', { encoding: 'utf-8', stdio: 'pipe' });
+    results.seed = execSync('npx -y tsx db/seed.ts', { encoding: 'utf-8', stdio: 'pipe' });
   } catch (err: any) {
     results.seedError = err.message + '\n' + err.stdout + '\n' + err.stderr;
   }
