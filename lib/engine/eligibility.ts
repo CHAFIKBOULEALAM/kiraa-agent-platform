@@ -58,14 +58,22 @@ function calculateYearsBetween(start: Date, end: Date): number {
 export function verifyDriverEligibility(params: EligibilityParams): EligibilityResult {
   const birthDate = new Date(params.birthDate);
   const licenseIssueDate = new Date(params.licenseIssueDate);
-  const licenseExpiryDate = new Date(params.licenseExpiryDate);
   const referenceDate = params.referenceDate
     ? new Date(params.referenceDate)
     : new Date();
 
   const age = calculateAge(birthDate, referenceDate);
   const seniority = calculateYearsBetween(licenseIssueDate, referenceDate);
-  const expired = licenseExpiryDate < referenceDate;
+
+  let expired = false;
+  let expiryDateStr = "";
+  if (params.licenseExpiryDate) {
+    const licenseExpiryDate = new Date(params.licenseExpiryDate);
+    if (!isNaN(licenseExpiryDate.getTime()) && licenseExpiryDate < referenceDate) {
+      expired = true;
+      expiryDateStr = licenseExpiryDate.toISOString().split("T")[0];
+    }
+  }
 
   let eligible = true;
   const reasons: string[] = [];
@@ -84,7 +92,7 @@ export function verifyDriverEligibility(params: EligibilityParams): EligibilityR
 
   if (expired) {
     eligible = false;
-    reasons.push(`Permis expiré depuis le ${licenseExpiryDate.toISOString().split("T")[0]}`);
+    reasons.push(`Permis expiré depuis le ${expiryDateStr}`);
   }
 
   let riskCategory: string;

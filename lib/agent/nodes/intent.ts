@@ -61,9 +61,10 @@ export async function intentNode(state: KiraaState): Promise<Partial<KiraaState>
         content: `You are Kiraa, an intelligent car rental assistant. 
 Determine the primary intent of the user's message.
 Extract any relevant parameters into extractedParams (vehicleName, startDate, endDate, driverAge, licenseIssueDate, licenseExpiryDate, discountCode).
-If the user mentions a vehicle name or wants to rent a car, extract the vehicle to 'vehicleName'.
-If the request is unrelated to car rentals (e.g. asking for code, recipes, general trivia), MUST return 'out_of_scope'.
+If the user mentions a vehicle name (e.g. Dassi, Dacia, Peugeot, Golf, Audi) or wants to rent a car, extract the vehicle to 'vehicleName' and return 'make_reservation'.
+If the request is genuinely unrelated to car rentals (e.g. asking for code, recipes, general trivia), MUST return 'out_of_scope'.
 If the user demands a human agent, return 'human_escalation'.
+If the user asks about policies, cancellation, etc., return 'policy_query'.
 If the user is asking to rent, book, or mentions a vehicle with rental intent, return 'make_reservation'.${ocrContext}`,
       },
       {
@@ -103,7 +104,6 @@ If the user is asking to rent, book, or mentions a vehicle with rental intent, r
        if (!finalParams.endDate) missingSlots.push("la date de fin de location");
        if (!finalParams.driverAge) missingSlots.push("votre âge");
        if (!finalParams.licenseIssueDate) missingSlots.push("la date de délivrance de votre permis");
-       if (!finalParams.licenseExpiryDate) missingSlots.push("la date d'expiration de votre permis");
 
        if (missingSlots.length > 0) {
           bookingStatus = "MISSING_DETAILS";

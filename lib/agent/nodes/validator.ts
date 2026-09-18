@@ -11,7 +11,7 @@ export async function validatorNode(state: KiraaState): Promise<Partial<KiraaSta
   
   // Only validate if intent matches and we have the params
   if (state.intent === "validate_eligibility" || state.intent === "make_reservation") {
-    if (state.params.birthDate && state.params.licenseIssueDate && state.params.licenseExpiryDate) {
+    if (state.params.birthDate && state.params.licenseIssueDate) {
       const res = verifyDriverEligibility({
         birthDate: state.params.birthDate,
         licenseIssueDate: state.params.licenseIssueDate,
