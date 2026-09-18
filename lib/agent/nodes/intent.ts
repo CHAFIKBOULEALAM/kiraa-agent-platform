@@ -15,15 +15,15 @@ const IntentOutputSchema = z.object({
   ]),
   confidence: z.number().min(0).max(1),
   extractedParams: z.object({
-    vehicleName: z.string().optional().describe("A vehicle mention, e.g. Peugeot 208, Dassia, Golf, etc."),
-    startDate: z.string().optional().describe("Rental start date YYYY-MM-DD"),
-    endDate: z.string().optional().describe("Rental end date YYYY-MM-DD"),
-    driverAge: z.number().optional().describe("Age of the driver if mentioned"),
-    licenseIssueDate: z.string().optional().describe("License issue date YYYY-MM-DD"),
-    licenseExpiryDate: z.string().optional().describe("License expiry date YYYY-MM-DD"),
-    discountCode: z.string().optional().describe("Any discount code mentioned"),
-    name: z.string().optional(),
-    idNumber: z.string().optional(),
+    vehicleName: z.string().nullable().optional().describe("A vehicle mention, e.g. Peugeot 208, Dassia, Golf, etc."),
+    startDate: z.string().nullable().optional().describe("Rental start date YYYY-MM-DD"),
+    endDate: z.string().nullable().optional().describe("Rental end date YYYY-MM-DD"),
+    driverAge: z.number().nullable().optional().describe("Age of the driver if mentioned"),
+    licenseIssueDate: z.string().nullable().optional().describe("License issue date YYYY-MM-DD"),
+    licenseExpiryDate: z.string().nullable().optional().describe("License expiry date YYYY-MM-DD"),
+    discountCode: z.string().nullable().optional().describe("Any discount code mentioned"),
+    name: z.string().nullable().optional(),
+    idNumber: z.string().nullable().optional(),
   }).strict().default({}),
 }).strict();
 
@@ -72,9 +72,13 @@ If the user is asking to rent, book, or mentions a vehicle with rental intent, r
       }
     ]);
 
+    const cleanedParams = Object.fromEntries(
+      Object.entries(response.extractedParams || {}).filter(([_, v]) => v !== null)
+    );
+
     let finalParams: Record<string, any> = {
       ...state.params,
-      ...(response.extractedParams || {}),
+      ...cleanedParams,
     };
 
     // Attempt deterministic fuzzy match if vehicleName is provided
