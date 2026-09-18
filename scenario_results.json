@@ -1,184 +1,23 @@
 {
-  "1. Dassi vehicle": {
-    "requestId": "REQ-3FEEB4C0",
-    "intent": "out_of_scope",
-    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": null,
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [
-      "Failed to determine intent."
-    ],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SkNBEEb7fYp5gVzn95ssXG4haGEnbCcWMe52KfL+jWwUSUghNlMcZjhnhJiYdkJMWZWOp3Iucsce2w8UkrpfpFJqLnBqp/LwLKRMbZS3NRSSnIyRutHOmdZ0ZbimCzoEx6xpCGX/QJ1LwrRCIBvxO7WX8tTK618NwYR9LuK/AaLfAV7dlUMRKRn9kI6wwzYv1sk9QvTTzOHh4WruZvxfd9qiqfdu9Om7zIqBPj/v9cIsvdfrFoyM9BgYQIw0GEYy4qblCz6XVn8KZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwNzIzWikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyNiAwMDAwMCBuIAowMDAwMDAwODgzIDAwMDAwIG4gCjAwMDAwMDA3NjQgMDAwMDAgbiAKMDAwMDAwMDc0MyAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ2IDAwMDAwIG4gCjAwMDAwMDA1NzEgMDAwMDAgbiAKMDAwMDAwMDQ4NSAwMDAwMCBuIAowMDAwMDAwNTEwIDAwMDAwIG4gCjAwMDAwMDA1MzUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzw0YWJlNGE5NTY4MmZlZjAxZmEzZGQxYTg0NGRjYzdkNz4gPDRhYmU0YTk1NjgyZmVmMDFmYTNkZDFhODQ0ZGNjN2Q3Pl0KPj4Kc3RhcnR4cmVmCjkzMAolJUVPRgo=",
-    "params": {},
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "2. Minor driver (19)": {
-    "requestId": "REQ-48DF9B65",
+  "10. PDF generation (Rejected)": {
+    "requestId": "REQ-874F2CAF",
     "intent": "make_reservation",
-    "explanation": "Pour finaliser votre demande, veuillez préciser : le modèle du véhicule souhaité, la date d'expiration de votre permis.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": "MISSING_DETAILS",
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTgKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZA5TgQxEEVzn6IuME2tv9pSywESBGRInSGCWdzZBNw/QW4WgSZAJBU8lf1ffSEmpoMQU1al87W8Fblh9+snFJI6T1IpNSc4rddy9yikTOtWXpZQSHIyttRGB2da0pXhmi7oEJyzpiGU/YQ6loRpgUAa8SutT+VhLc9/OQQT5pzEvwVEPwS8uiuHIlIy+jEdYcc2XiyDe4Toxdxmd4dVV4PFf7PTJk29zUYfefus2NDH5b3uzNJ7/emCCwSnNqpbELHlcDbEXpyN4tBIY5Tz9d0vzXeXflu4CmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDczMFopCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MzkgMDAwMDAgbiAKMDAwMDAwMDg5NiAwMDAwMCBuIAowMDAwMDAwNzc3IDAwMDAwIG4gCjAwMDAwMDA3NTYgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY1OSAwMDAwMCBuIAowMDAwMDAwNTg0IDAwMDAwIG4gCjAwMDAwMDA0OTggMDAwMDAgbiAKMDAwMDAwMDUyMyAwMDAwMCBuIAowMDAwMDAwNTQ4IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8ZjUwMTRjZDUzNmMxNWE1ZmZhZTM1ZjU3ODQ3ZWVhNjc+IDxmNTAxNGNkNTM2YzE1YTVmZmFlMzVmNTc4NDdlZWE2Nz5dCj4+CnN0YXJ0eHJlZgo5NDMKJSVFT0YK",
-    "params": {
-      "vehicleName": "Clio",
-      "startDate": "2026-10-10",
-      "endDate": "2026-10-15",
-      "driverAge": 19,
-      "licenseIssueDate": "2025-01-01",
-      "unresolvedVehicle": "Clio",
-      "missingSlots": [
-        "le modèle du véhicule souhaité",
-        "la date d'expiration de votre permis"
-      ]
+    "explanation": "Bonjour,\n\n**Éligibilité : Non**  \n**Raisons du rejet :**  \n- Âge insuffisant : 18 ans (minimum requis : 21 ans)  \n- Ancienneté du permis insuffisante : 1,7 ans (minimum requis : 2 ans)\n\nJe reste à votre disposition si vous souhaitez explorer d’autres véhicules ou dates.",
+    "eligibilityResult": {
+      "eligible": false,
+      "age": 18,
+      "licenseSeniorityYears": 1.7,
+      "licenseExpired": false,
+      "riskCategory": "ineligible",
+      "rejectionReasons": [
+        "Âge insuffisant : 18 ans (minimum requis : 21 ans)",
+        "Ancienneté du permis insuffisante : 1.7 ans (minimum requis : 2 ans)"
+      ],
+      "needsHumanReview": false,
+      "vehicleCategory": null
     },
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "3. Expired licence": {
-    "requestId": "REQ-4B93F87D",
-    "intent": "make_reservation",
-    "explanation": "Pour finaliser votre demande, veuillez préciser : le modèle du véhicule souhaité, la date d'expiration de votre permis.",
-    "eligibilityResult": null,
     "priceResult": null,
-    "bookingStatus": "MISSING_DETAILS",
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTgKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZA5TgQxEEVzn6IuME2tv9pSywESBGRInSGCWdzZBNw/QW4WgSZAJBU8lf1ffSEmpoMQU1al87W8Fblh9+snFJI6T1IpNSc4rddy9yikTOtWXpZQSHIyttRGB2da0pXhmi7oEJyzpiGU/YQ6loRpgUAa8SutT+VhLc9/OQQT5pzEvwVEPwS8uiuHIlIy+jEdYcc2XiyDe4ToxdzVqpnDZkv3/2anTZp6m40+8vZZsaGPy3vdmaX3+tMFFwhObVS3IGLL4WyIvTgbxaGRxijn67tfmu+Wn1u3CmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDczOFopCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MzkgMDAwMDAgbiAKMDAwMDAwMDg5NiAwMDAwMCBuIAowMDAwMDAwNzc3IDAwMDAwIG4gCjAwMDAwMDA3NTYgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY1OSAwMDAwMCBuIAowMDAwMDAwNTg0IDAwMDAwIG4gCjAwMDAwMDA0OTggMDAwMDAgbiAKMDAwMDAwMDUyMyAwMDAwMCBuIAowMDAwMDAwNTQ4IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8NzNmMGRhNDQyYjY1YzQ2ZDRhMWI1ZDM3NjZhN2NhNzc+IDw3M2YwZGE0NDJiNjVjNDZkNGExYjVkMzc2NmE3Y2E3Nz5dCj4+CnN0YXJ0eHJlZgo5NDMKJSVFT0YK",
-    "params": {
-      "vehicleName": "Clio",
-      "startDate": "2026-10-10",
-      "endDate": "2026-10-15",
-      "driverAge": 35,
-      "licenseIssueDate": "2010-01-01",
-      "unresolvedVehicle": "Clio",
-      "missingSlots": [
-        "le modèle du véhicule souhaité",
-        "la date d'expiration de votre permis"
-      ]
-    },
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "4. 22-year-old requesting Premium": {
-    "requestId": "REQ-2689A5CE",
-    "intent": "make_reservation",
-    "explanation": "Pour finaliser votre demande, veuillez préciser : la date d'expiration de votre permis.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": "MISSING_DETAILS",
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTgKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZA5TgQxEEVzn6IuME2tv9pSywESBGRInSGCWdzZBNw/QW4WgSZAJBU8lf1ffSEmpoMQU1al87W8Fblh9+snFJI6T1IpNSc4rddy9yikTOtWXpZQSHIyttRGB2da0pXhmi7oEJyzpiGU/YQ6loRpgUAa8SutT+VhLc9/OQQT5pzEvwVEPwS8uiuHIlIy+jEdYcc2XiyDe4ToxdRgs1UXCzeP/2anTZp6m40+8vZZsaGPy3vdmaX3+tMFFwhObVS3IGLL4WyIvTgbxaGRxijn67tfmu+TyVuzCmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDc0NVopCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MzkgMDAwMDAgbiAKMDAwMDAwMDg5NiAwMDAwMCBuIAowMDAwMDAwNzc3IDAwMDAwIG4gCjAwMDAwMDA3NTYgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY1OSAwMDAwMCBuIAowMDAwMDAwNTg0IDAwMDAwIG4gCjAwMDAwMDA0OTggMDAwMDAgbiAKMDAwMDAwMDUyMyAwMDAwMCBuIAowMDAwMDAwNTQ4IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8NmNiNTY4OTVhYjdkMDgxNTExNDg5ZDkwNWJkMGEwNjA+IDw2Y2I1Njg5NWFiN2QwODE1MTE0ODlkOTA1YmQwYTA2MD5dCj4+CnN0YXJ0eHJlZgo5NDMKJSVFT0YK",
-    "params": {
-      "vehicleName": "Range Rover",
-      "startDate": "2026-10-10",
-      "endDate": "2026-10-15",
-      "driverAge": 22,
-      "licenseIssueDate": "2022-01-01",
-      "vehicleId": "VH-0040",
-      "make": "Land Rover",
-      "model": "Range Rover",
-      "missingSlots": [
-        "la date d'expiration de votre permis"
-      ]
-    },
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "5. Discount code above 15%": {
-    "requestId": "REQ-376174B9",
-    "intent": "make_reservation",
-    "explanation": "Pour finaliser votre demande, veuillez préciser : le modèle du véhicule souhaité, la date d'expiration de votre permis.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": "MISSING_DETAILS",
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTgKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZC7TgMxEEV7f8X8QJZ53omllQskKOiQtkMUeXi7FPx/g7wkCJQC0UxxNPY9c4WYmHZCTFmVTpfyUeSOPS5XKCR1P0ml1JzgtFzKw7OQMi1reZtDIcnJWFMb7ZxpTleGa7qgQ3DKmoZQ9iPqWBKmGQJpxO+0vJSnpbz+5RBM2Ock/i0g+iXg1V05FJGS0Q/pCDu08WIe3CNEz2aWBhNLc1er/81OmzT1Pht95G2zYkUfl/e6MUvv9acLzhAc26huRsSaw9kQW3E2ikMjjVHO7btfmp+SO1uxCmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDc1M1opCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MzkgMDAwMDAgbiAKMDAwMDAwMDg5NiAwMDAwMCBuIAowMDAwMDAwNzc3IDAwMDAwIG4gCjAwMDAwMDA3NTYgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY1OSAwMDAwMCBuIAowMDAwMDAwNTg0IDAwMDAwIG4gCjAwMDAwMDA0OTggMDAwMDAgbiAKMDAwMDAwMDUyMyAwMDAwMCBuIAowMDAwMDAwNTQ4IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8MGVmMjFmMzQ3NzViNWQ4MzhjODk4YjVhMDlkZjg5NDM+IDwwZWYyMWYzNDc3NWI1ZDgzOGM4OThiNWEwOWRmODk0Mz5dCj4+CnN0YXJ0eHJlZgo5NDMKJSVFT0YK",
-    "params": {
-      "vehicleName": "Clio",
-      "startDate": "2026-10-10",
-      "endDate": "2026-10-15",
-      "driverAge": 30,
-      "licenseIssueDate": "2015-01-01",
-      "discountCode": "SUMMER20",
-      "unresolvedVehicle": "Clio",
-      "missingSlots": [
-        "le modèle du véhicule souhaité",
-        "la date d'expiration de votre permis"
-      ]
-    },
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "6. Pure policy question": {
-    "requestId": "REQ-46DBCE63",
-    "intent": "policy_query",
-    "explanation": "**Politique d'annulation**\n\n- **Gratuite** : si vous annulez **au moins 48 h** avant la date de prise en charge du véhicule, vous êtes remboursé intégralement.  \n- **Frais** : si l’annulation intervient **moins de 48 h** avant la prise en charge, des frais de **30 % à 100 %** du montant de la réservation s’appliquent, selon le moment exact de l’annulation.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": null,
+    "bookingStatus": "READY_FOR_CALCULATION",
     "needsHumanReview": false,
     "escalationReasons": [],
     "errors": [],
@@ -190,145 +29,8 @@
       "explainer",
       "reporter"
     ],
-    "ragPassages": [
-      {
-        "content": "## Politique d'Annulation",
-        "score": 0.6474972718947583
-      },
-      {
-        "content": "### Puis-je annuler ma réservation sans frais ?\r\nOui, si l'annulation est effectuée au moins 48 heures avant la date de prise en charge. Passé ce délai, des frais de 30% à 100% s'appliquent.",
-        "score": 0.5551123684778693
-      },
-      {
-        "content": "Toute annulation effectuée au moins 48 heures avant la date de prise en charge du véhicule est entièrement gratuite. Le client recevra un remboursement intégral du montant payé.",
-        "score": 0.5115571326945585
-      }
-    ],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDgKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZC9SgRRDIX7+xR5gR3ze7KBYQpBCzthOrFY1zvdFvv+jdxRRNlCbFJ8JJwvR4iJ6SDElKV0vrRrkxt2v35BIanjJEWpOcFpvbS7RyFlWrf2ModCkpOxpS50cKY5XRmu6YIOwTkrDaHsb6ixJEwzBLIQv9L61B7W9vyXQzDhmJP4t4Dop4CXu3IoIiWjn9IRdlrGxTy4R4i+mxvcXd08DGb/zU6bNPU2G33k7bOwoY/Pe+3M0nv9dBkl4YyCZcU2bBF7aTZKq19KH5YfV3IKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwODAyWikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyOSAwMDAwMCBuIAowMDAwMDAwODg2IDAwMDAwIG4gCjAwMDAwMDA3NjcgMDAwMDAgbiAKMDAwMDAwMDc0NiAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ5IDAwMDAwIG4gCjAwMDAwMDA1NzQgMDAwMDAgbiAKMDAwMDAwMDQ4OCAwMDAwMCBuIAowMDAwMDAwNTEzIDAwMDAwIG4gCjAwMDAwMDA1MzggMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzwxNGViOGVlMmZhZWYyZDViMTVhOGQyODg2ZmM0NmE3Nj4gPDE0ZWI4ZWUyZmFlZjJkNWIxNWE4ZDI4ODZmYzQ2YTc2Pl0KPj4Kc3RhcnR4cmVmCjkzMwolJUVPRgo=",
-    "params": {},
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "7. Genuinely off-topic": {
-    "requestId": "REQ-C3C3E5AC",
-    "intent": "out_of_scope",
-    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": null,
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
     "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDgKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclc+9SkRBDAXgfp4iL7DX/J7swHALQQs7YTqxWNeZbot9/0buVUTZQiyS4pCQL0JMTAchpqxK50u5FrnJ7vtXKCT1uEil1Fzg1C/l7lFImfosLy0UkpyMmbrSwZlaujJc0wUDgnPWNISyv6FuQ8LUIJCV+JX6U3no5fkvQzDhmIv4N0D0E+DVXTkUkZIxTukIO63bRttyjxB9dzPbKyxcVjKm5vZfQdqiqbcCjO3q3ismxvb/qHtm6aP+FGFmpMfEBGKmwTCTEb8sHyqmV5oKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwODA5WikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyOSAwMDAwMCBuIAowMDAwMDAwODg2IDAwMDAwIG4gCjAwMDAwMDA3NjcgMDAwMDAgbiAKMDAwMDAwMDc0NiAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ5IDAwMDAwIG4gCjAwMDAwMDA1NzQgMDAwMDAgbiAKMDAwMDAwMDQ4OCAwMDAwMCBuIAowMDAwMDAwNTEzIDAwMDAwIG4gCjAwMDAwMDA1MzggMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzwwMDVhNDUwOWFkNTdlM2ExYmVlMGRjMTQzYmQ4M2YxYT4gPDAwNWE0NTA5YWQ1N2UzYTFiZWUwZGMxNDNiZDgzZjFhPl0KPj4Kc3RhcnR4cmVmCjkzMwolJUVPRgo=",
-    "params": {},
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "8. Vehicle mention only (missing slots)": {
-    "requestId": "REQ-7D1983C4",
-    "intent": "make_reservation",
-    "explanation": "Pour finaliser votre demande, veuillez préciser : la date de début de location, la date de fin de location, votre âge, la date de délivrance de votre permis, la date d'expiration de votre permis.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": "MISSING_DETAILS",
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTkKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZA5TgQxEEVzn6IuME2tv9pSywESBGRInSGCWdzZBNw/QW4WgSZAJBU8lf1ffSEmpoMQU1al87W8Fblh9+snFJI6T1IpNSc4rddy9yikTOtWXpZQSHIyttRGB2da0pXhmi7oEJyzpiGU/YQ6loRpgUAa8SutT+VhLc9/OQQT5pzEvwVEPwS8uiuHIlIy+jEdYcc2XiyDe4ToxdLdxKrNZm7m/81OmzT1Nht95O2zYkMfl/e6M0vv9acLLhCc2qhuQcSWw9kQe3E2ikMjjVHO13e/NN8BkyNbsgplbmRzdHJlYW0KZW5kb2JqCjEwIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMSAwIG9iagooUERGS2l0KQplbmRvYmoKMTIgMCBvYmoKKEQ6MjAyNjA5MTgwMTA4MTdaKQplbmRvYmoKOSAwIG9iago8PAovUHJvZHVjZXIgMTAgMCBSCi9DcmVhdG9yIDExIDAgUgovQ3JlYXRpb25EYXRlIDEyIDAgUgo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKPj4KZW5kb2JqCjQgMCBvYmoKPDwKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDEgMCBSCi9OYW1lcyAyIDAgUgo+PgplbmRvYmoKMSAwIG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWzcgMCBSXQo+PgplbmRvYmoKMiAwIG9iago8PAovRGVzdHMgPDwKICAvTmFtZXMgWwpdCj4+Cj4+CmVuZG9iagp4cmVmCjAgMTMKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwODQwIDAwMDAwIG4gCjAwMDAwMDA4OTcgMDAwMDAgbiAKMDAwMDAwMDc3OCAwMDAwMCBuIAowMDAwMDAwNzU3IDAwMDAwIG4gCjAwMDAwMDAyMDggMDAwMDAgbiAKMDAwMDAwMDExOSAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDA2NjAgMDAwMDAgbiAKMDAwMDAwMDU4NSAwMDAwMCBuIAowMDAwMDAwNDk5IDAwMDAwIG4gCjAwMDAwMDA1MjQgMDAwMDAgbiAKMDAwMDAwMDU0OSAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDEzCi9Sb290IDMgMCBSCi9JbmZvIDkgMCBSCi9JRCBbPDI4MTE4YmMwMGFkMzcxOWRkYWY5YWFjMTA1OGNiYjU4PiA8MjgxMThiYzAwYWQzNzE5ZGRhZjlhYWMxMDU4Y2JiNTg+XQo+PgpzdGFydHhyZWYKOTQ0CiUlRU9GCg==",
-    "params": {
-      "vehicleName": "Audi A7",
-      "vehicleId": "VH-0002",
-      "make": "Audi",
-      "model": "A7",
-      "missingSlots": [
-        "la date de début de location",
-        "la date de fin de location",
-        "votre âge",
-        "la date de délivrance de votre permis",
-        "la date d'expiration de votre permis"
-      ]
-    },
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "9. Follow-up providing dates": {
-    "requestId": "REQ-7D1983C4",
-    "intent": "make_reservation",
-    "explanation": "Pour finaliser votre demande, veuillez préciser : la date d'expiration de votre permis.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": "MISSING_DETAILS",
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTkKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZA5TgQxEEVzn6IuME2tv9pSywESBGRInSGCWdzZBNw/QW4WgSZAJBU8lf1ffSEmpoMQU1al87W8Fblh9+snFJI6T1IpNSc4rddy9yikTOtWXpZQSHIyttRGB2da0pXhmi7oEJyzpiGU/YQ6loRpgUAa8SutT+VhLc9/OQQT5pzEvwVEPwS8uiuHIlIy+jEdYcc2XiyDe4ToxdLdxKrNZm7m/81OmzT1Nht95O2zYkMfl/e6M0vv9acLLhCc2qhuQcSWw9kQe3E2ikMjjVHO13e/NN8BkyNbsgplbmRzdHJlYW0KZW5kb2JqCjEwIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMSAwIG9iagooUERGS2l0KQplbmRvYmoKMTIgMCBvYmoKKEQ6MjAyNjA5MTgwMTA4MjVaKQplbmRvYmoKOSAwIG9iago8PAovUHJvZHVjZXIgMTAgMCBSCi9DcmVhdG9yIDExIDAgUgovQ3JlYXRpb25EYXRlIDEyIDAgUgo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKPj4KZW5kb2JqCjQgMCBvYmoKPDwKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDEgMCBSCi9OYW1lcyAyIDAgUgo+PgplbmRvYmoKMSAwIG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWzcgMCBSXQo+PgplbmRvYmoKMiAwIG9iago8PAovRGVzdHMgPDwKICAvTmFtZXMgWwpdCj4+Cj4+CmVuZG9iagp4cmVmCjAgMTMKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwODQwIDAwMDAwIG4gCjAwMDAwMDA4OTcgMDAwMDAgbiAKMDAwMDAwMDc3OCAwMDAwMCBuIAowMDAwMDAwNzU3IDAwMDAwIG4gCjAwMDAwMDAyMDggMDAwMDAgbiAKMDAwMDAwMDExOSAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDA2NjAgMDAwMDAgbiAKMDAwMDAwMDU4NSAwMDAwMCBuIAowMDAwMDAwNDk5IDAwMDAwIG4gCjAwMDAwMDA1MjQgMDAwMDAgbiAKMDAwMDAwMDU0OSAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDEzCi9Sb290IDMgMCBSCi9JbmZvIDkgMCBSCi9JRCBbPGU5MTI2ZmE3ZDkwMmQ0MTM0NzZhMzExMzAzZTFjMzBmPiA8ZTkxMjZmYTdkOTAyZDQxMzQ3NmEzMTEzMDNlMWMzMGY+XQo+PgpzdGFydHhyZWYKOTQ0CiUlRU9GCg==",
-    "params": {
-      "vehicleName": "Audi A7",
-      "vehicleId": "VH-0002",
-      "make": "Audi",
-      "model": "A7",
-      "missingSlots": [
-        "la date d'expiration de votre permis"
-      ],
-      "startDate": "2026-10-15",
-      "endDate": "2026-10-20",
-      "driverAge": 30,
-      "licenseIssueDate": "2015-01-01"
-    },
-    "ocr": {
-      "status": null,
-      "confidence": 0,
-      "mode": "native"
-    }
-  },
-  "10. PDF generation (Rejected)": {
-    "requestId": "REQ-082F8EB7",
-    "intent": "make_reservation",
-    "explanation": "Pour finaliser votre demande, veuillez préciser : la date d'expiration de votre permis.",
-    "eligibilityResult": null,
-    "priceResult": null,
-    "bookingStatus": "MISSING_DETAILS",
-    "needsHumanReview": false,
-    "escalationReasons": [],
-    "errors": [],
-    "graphTrace": [
-      "ingestor",
-      "intent",
-      "explainer",
-      "reporter"
-    ],
-    "ragPassages": [],
-    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTkKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZA5TgQxEEVzn6IuME2tv9pSywESBGRInSGCWdzZBNw/QW4WgSZAJBU8lf1ffSEmpoMQU1al87W8Fblh9+snFJI6T1IpNSc4rddy9yikTOtWXpZQSHIyttRGB2da0pXhmi7oEJyzpiGU/YQ6loRpgUAa8SutT+VhLc9/OQQT5pzEvwVEPwS8uiuHIlIy+jEdYcc2XiyDe4ToxdhmU4fNHq6W/81OmzT1Nht95O2zYkMfl/e6M0vv9acLLhCc2qhuQcSWw9kQe3E2ikMjjVHO13e/NN8BkupbsgplbmRzdHJlYW0KZW5kb2JqCjEwIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMSAwIG9iagooUERGS2l0KQplbmRvYmoKMTIgMCBvYmoKKEQ6MjAyNjA5MTgwMTA4MzJaKQplbmRvYmoKOSAwIG9iago8PAovUHJvZHVjZXIgMTAgMCBSCi9DcmVhdG9yIDExIDAgUgovQ3JlYXRpb25EYXRlIDEyIDAgUgo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKPj4KZW5kb2JqCjQgMCBvYmoKPDwKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDEgMCBSCi9OYW1lcyAyIDAgUgo+PgplbmRvYmoKMSAwIG9iago8PAovVHlwZSAvUGFnZXMKL0NvdW50IDEKL0tpZHMgWzcgMCBSXQo+PgplbmRvYmoKMiAwIG9iago8PAovRGVzdHMgPDwKICAvTmFtZXMgWwpdCj4+Cj4+CmVuZG9iagp4cmVmCjAgMTMKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwODQwIDAwMDAwIG4gCjAwMDAwMDA4OTcgMDAwMDAgbiAKMDAwMDAwMDc3OCAwMDAwMCBuIAowMDAwMDAwNzU3IDAwMDAwIG4gCjAwMDAwMDAyMDggMDAwMDAgbiAKMDAwMDAwMDExOSAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDA2NjAgMDAwMDAgbiAKMDAwMDAwMDU4NSAwMDAwMCBuIAowMDAwMDAwNDk5IDAwMDAwIG4gCjAwMDAwMDA1MjQgMDAwMDAgbiAKMDAwMDAwMDU0OSAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDEzCi9Sb290IDMgMCBSCi9JbmZvIDkgMCBSCi9JRCBbPGQwNDQ5NThhOGRmNDBhOTZmYjc4ZTU5NTY1NDRjMzQwPiA8ZDA0NDk1OGE4ZGY0MGE5NmZiNzhlNTk1NjU0NGMzNDA+XQo+PgpzdGFydHhyZWYKOTQ0CiUlRU9GCg==",
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAzOTEKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCnicpZO9itxAEIRzPcW8wI37t1oDQoHBDpwZlBkHe6vZ7AK/f2JauxZrdMbIViBEM931VamHCxUqL1yoRJNyfRt+DHyofVweRS7cxsqthESFleVt+PCZi1BZbsO3yQUcFIRbyFxejMoUJgSTMEYH4xotFC5kr2h5iKlMYPBc6HtZvgyfluHr3xicCsaobDsAyx3AmpmQCzw4vF/C4HqZs2PKurmzrDpqqBlUTI0NZ7VDq4QctdFTb3s33NDTeW9bTcN6e2bBCsbrnNFNcL9FMit8C04zOMxFPMP5Ne4spkmFY8fEA9NxRUOgQdDyOwHPzpaopIcIXMOSNzzsOXY4LvB/0WGtjEPSjHjOUllHITB66EkBb63KOB6MCBi5qbecmf8xXCh2I6l9Tmf0akcnsgpdJd0IIfdHw5FPaqcfE3rfp5CMWLMHDev9HoVjvVPm9ueM37pFee9uZ/mDqx/vW/JvN1vRcvPRM53e9sTosdHbJq93pPeNZgTPVqVr/I/ZP1j9CWY5CC0KZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDExNjA1WikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMTAxMiAwMDAwMCBuIAowMDAwMDAxMDY5IDAwMDAwIG4gCjAwMDAwMDA5NTAgMDAwMDAgbiAKMDAwMDAwMDkyOSAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwODMyIDAwMDAwIG4gCjAwMDAwMDA3NTcgMDAwMDAgbiAKMDAwMDAwMDY3MSAwMDAwMCBuIAowMDAwMDAwNjk2IDAwMDAwIG4gCjAwMDAwMDA3MjEgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzw1MTBjM2RiMWRjNTYzM2UxYTMwNzMxMzc0ZTdjNjYzZj4gPDUxMGMzZGIxZGM1NjMzZTFhMzA3MzEzNzRlN2M2NjNmPl0KPj4Kc3RhcnR4cmVmCjExMTYKJSVFT0YK",
     "params": {
       "vehicleName": "Range Rover",
       "startDate": "2026-10-10",
@@ -338,9 +40,7 @@
       "vehicleId": "VH-0040",
       "make": "Land Rover",
       "model": "Range Rover",
-      "missingSlots": [
-        "la date d'expiration de votre permis"
-      ]
+      "birthDate": "2008-01-01"
     },
     "ocr": {
       "status": null,

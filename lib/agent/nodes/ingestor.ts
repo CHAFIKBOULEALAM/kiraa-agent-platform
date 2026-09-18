@@ -7,6 +7,7 @@ export async function ingestorNode(state: KiraaState): Promise<Partial<KiraaStat
   
   return {
     ...result,
+    messages: [{ role: "user", content: state.rawInput || "" }],
     graphTrace: [...state.graphTrace, "ingestor"],
   };
 }

@@ -3,7 +3,7 @@ import { ChatGroq } from "@langchain/groq";
 import { retrieveRelevantPolicies } from "@/lib/rag";
 
 const groqModel = new ChatGroq({
-  model: process.env.LLM_MODEL || process.env.GROQ_MODEL || "qwen/qwen3.8-27b",
+  model: process.env.LLM_MODEL || process.env.GROQ_MODEL || "llama-3.1-8b-instant",
   temperature: 0.3,
 });
 
@@ -11,23 +11,29 @@ export async function explainerNode(state: KiraaState): Promise<Partial<KiraaSta
   console.log("-> [Node] Explainer");
 
   if (state.intent === "out_of_scope") {
+    const explanation = "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.";
     return {
-      explanation: "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+      explanation,
+      messages: [{ role: "bot", content: explanation }],
       graphTrace: [...state.graphTrace, "explainer"],
     };
   }
 
   if (state.intent === "human_escalation" || state.needsHumanReview) {
+    const explanation = "Votre demande necessite l'intervention d'un agent humain. Un conseiller va prendre le relais.";
     return {
-      explanation: "Votre demande necessite l'intervention d'un agent humain. Un conseiller va prendre le relais.",
+      explanation,
+      messages: [{ role: "bot", content: explanation }],
       graphTrace: [...state.graphTrace, "explainer"],
     };
   }
 
   if (state.bookingStatus === "MISSING_DETAILS") {
     let missingList = state.params?.missingSlots || [];
+    const explanation = "Pour finaliser votre demande, veuillez préciser : " + missingList.join(", ") + ".";
     return {
-      explanation: "Pour finaliser votre demande, veuillez préciser : " + missingList.join(", ") + ".",
+      explanation,
+      messages: [{ role: "bot", content: explanation }],
       graphTrace: [...state.graphTrace, "explainer"],
     };
   }
@@ -41,9 +47,11 @@ export async function explainerNode(state: KiraaState): Promise<Partial<KiraaSta
       console.log("   [Explainer] Retrieved " + String(ragPassages.length) + " RAG passages.");
     } catch (err) {
       console.error("   [Explainer] RAG Error:", err);
+      const explanation = "Une erreur de base de données (RAG) est survenue. Veuillez réessayer.";
       return {
         errors: [...state.errors, "RAG PostgreSQL Database is unavailable."],
-        explanation: "Une erreur de base de données (RAG) est survenue. Veuillez réessayer.",
+        explanation,
+        messages: [{ role: "bot", content: explanation }],
         graphTrace: [...state.graphTrace, "explainer"],
       };
     }
@@ -80,8 +88,10 @@ export async function explainerNode(state: KiraaState): Promise<Partial<KiraaSta
       }
     ]);
 
+    const explanation = response.content.toString();
     return {
-      explanation: response.content.toString(),
+      explanation,
+      messages: [{ role: "bot", content: explanation }],
       ragPassages,
       graphTrace: [...state.graphTrace, "explainer"],
     };
@@ -96,6 +106,7 @@ export async function explainerNode(state: KiraaState): Promise<Partial<KiraaSta
     return {
       errors: [...state.errors, "Failed to generate explanation."],
       explanation,
+      messages: [{ role: "bot", content: explanation }],
       ragPassages,
       graphTrace: [...state.graphTrace, "explainer"],
     };

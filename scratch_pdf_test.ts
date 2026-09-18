@@ -11,8 +11,9 @@ async function verifyPDF() {
       rawInput: "Je veux louer une voiture, j'ai 36 ans, j'ai le permis depuis 1 an.",
       uploadedFiles: [],
       intent: null,
-      intentConfidence: 0,
+      intentConfidence: 1,
       intentOverride: "make_reservation",
+      messages: [],
       params: {
         driverAge: 36,
         licenseIssueDate: "2023-01-01",

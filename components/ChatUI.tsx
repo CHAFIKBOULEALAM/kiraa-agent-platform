@@ -29,6 +29,7 @@ export function ChatUI() {
   const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const threadIdRef = useRef<string>(`REQ-${Math.random().toString(36).substring(2, 10).toUpperCase()}`);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -70,6 +71,7 @@ export function ChatUI() {
     try {
       const formData = new FormData();
       formData.append("message", userMessage.content);
+      formData.append("threadId", threadIdRef.current);
       userMessage.files?.forEach((file) => {
         formData.append("files", file);
       });

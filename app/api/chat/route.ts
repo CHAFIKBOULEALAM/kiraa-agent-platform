@@ -54,6 +54,7 @@ export async function POST(req: NextRequest) {
       intent: null,
       intentConfidence: 0,
       intentOverride: null, // always null — not from user input
+      messages: [],
       params: {},
       extractedContent: {},
       ocrConfidence: 0,

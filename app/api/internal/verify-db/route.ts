@@ -73,9 +73,12 @@ export async function POST(request: Request) {
       rawInput: "Test PDF generation",
       uploadedFiles: [],
       intent: "make_reservation",
-      intentConfidence: 1,
+      intentConfidence: 1.0,
       intentOverride: null,
-      params: { driverAge: 36, licenseIssueDate: "2010-01-01", vehicleId: "v1" },
+      messages: [],
+      params: {
+        driverAge: 25,
+        licenseIssueDate: "2018-01-01", vehicleId: "v1" },
       extractedContent: {},
       ocrConfidence: 0,
       eligibilityResult: { 

@@ -28,7 +28,7 @@ const IntentOutputSchema = z.object({
 }).strict();
 
 const groqModel = new ChatGroq({
-  model: process.env.LLM_MODEL || process.env.GROQ_MODEL || "qwen/qwen3.8-27b",
+  model: process.env.LLM_MODEL || process.env.GROQ_MODEL || "llama-3.1-8b-instant",
   temperature: 0,
 });
 
@@ -55,6 +55,11 @@ export async function intentNode(state: KiraaState): Promise<Partial<KiraaState>
        ocrContext = "\n\nExtracted OCR Data from uploaded documents:\n" + keys.map(k => state.extractedContent[k]).join("\n\n");
     }
 
+    const messagesContext = (state.messages || [])
+      .slice(-6)
+      .map((m: any) => `${m.role === 'user' ? 'User' : 'Assistant'}: ${m.content}`)
+      .join("\n");
+
     const response = await intentModel.invoke([
       {
         role: "system",
@@ -69,13 +74,28 @@ If the user is asking to rent, book, or mentions a vehicle with rental intent, r
       },
       {
         role: "user",
-        content: state.rawInput || "Message vide",
+        content: `Conversation History:\n${messagesContext}\n\nCurrent Input: ${state.rawInput || "Message vide"}`,
       }
     ]);
 
     const cleanedParams = Object.fromEntries(
       Object.entries(response.extractedParams || {}).filter(([_, v]) => v !== null)
     );
+
+    // Deterministic Continuation Rule
+    if (state.bookingStatus === "MISSING_DETAILS" && response.intent === "out_of_scope" && (state.rawInput || "").length < 100) {
+       console.log("-> [Intent] Overriding out_of_scope to make_reservation due to MISSING_DETAILS context.");
+       response.intent = "make_reservation";
+    }
+
+    // Hallucination Guard
+    if (response.extractedParams?.vehicleName) {
+      const vName = response.extractedParams.vehicleName;
+      if (vName.length > 60 || /\d+\s*(km|ch|portes)/i.test(vName)) {
+        console.warn(`-> [Intent] Discarding hallucinated vehicleName: ${vName}`);
+        delete response.extractedParams.vehicleName;
+      }
+    }
 
     let finalParams: Record<string, any> = {
       ...state.params,
@@ -127,8 +147,8 @@ If the user is asking to rent, book, or mentions a vehicle with rental intent, r
   } catch (error) {
     console.error("Intent LLM Error:", error);
     return {
-      intent: "out_of_scope", // Safe fallback
-      errors: [...state.errors, "Failed to determine intent."],
+      intent: "INTENT_CLASSIFICATION_FAILED" as any, // Surface the error
+      errors: [...state.errors, "Failed to determine intent due to an internal error or rate limit."],
       graphTrace: [...state.graphTrace, "intent"],
     };
   }

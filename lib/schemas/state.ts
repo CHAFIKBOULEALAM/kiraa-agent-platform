@@ -55,6 +55,9 @@ export const KiraaStateSchema = z.object({
     buffer: z.any().optional(),
   })).default([]),
 
+  // Conversation History
+  messages: z.array(z.any()).default([]),
+
   // Intent
   intent: IntentEnum.nullable().default(null),
   intentConfidence: z.number().default(0),

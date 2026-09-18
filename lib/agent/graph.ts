@@ -17,6 +17,7 @@ const graphChannels = {
   requestId: { value: (a: string, b?: string) => b ?? a, default: () => "req_" + Date.now() },
   rawInput: { value: (a: string, b?: string) => b ?? a, default: () => "" },
   uploadedFiles: { value: (a: any[], b?: any[]) => b ?? a, default: () => [] },
+  messages: { value: (a: any[], b?: any[]) => a.concat(b || []), default: () => [] },
   intent: { value: (a: Intent | null, b?: Intent | null) => b ?? a, default: () => null },
   intentConfidence: { value: (a: number, b?: number) => b ?? a, default: () => 0 },
   intentOverride: { value: (a: Intent | null, b?: Intent | null) => b ?? a, default: () => null },
