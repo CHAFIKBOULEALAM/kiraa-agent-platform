@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server';
 import { Pool } from 'pg';
 import { execSync } from 'child_process';
+import { db } from '../../../../db/index';
+import { sql } from 'drizzle-orm';
+import { resolveVehicleMention } from '../../../../lib/engine/vehicleResolution';
+import { createAgent } from '../../../../lib/agent/graph';
+import { KiraaState } from '../../../../lib/schemas/state';
 
 export async function GET(request: Request) {
   const key = request.headers.get('X-Internal-Verification-Key');
@@ -41,55 +46,79 @@ export async function POST(request: Request) {
     return new NextResponse('Unauthorized', { status: 401 });
   }
 
-  const results: any = {
-    migrations: null,
-    seed: null,
-    tableCounts: {},
-    vectorDims: null
-  };
+  const results: any = {};
 
   try {
-    results.migrations = execSync('npx -y drizzle-kit migrate', { encoding: 'utf-8', stdio: 'pipe' });
-  } catch (err: any) {
-    results.migrationsError = err.message + '\n' + err.stdout + '\n' + err.stderr;
-  }
+    // 1. Fleet catalog query
+    const catalogRes = await db.execute(sql`SELECT DISTINCT make, model FROM fleet_catalog ORDER BY make`);
+    results.fleetCatalog = (catalogRes as any).rows || catalogRes;
 
-  try {
-    results.seed = execSync('npx -y tsx db/seed.ts', { encoding: 'utf-8', stdio: 'pipe' });
-  } catch (err: any) {
-    results.seedError = err.message + '\n' + err.stdout + '\n' + err.stderr;
-  }
+    // 2. pg_trgm check and installation
+    await db.execute(sql`CREATE EXTENSION IF NOT EXISTS pg_trgm`);
+    const trgmRes = await db.execute(sql`SELECT extname FROM pg_extension WHERE extname = 'pg_trgm'`);
+    const rows: any = (trgmRes as any).rows || trgmRes;
+    results.pgTrgm = rows.length > 0 ? rows[0].extname : 'absent';
 
-  try {
-    const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-    const tables = [
-      'fleet_catalog',
-      'customer_profiles',
-      'booking_logs',
-      'seasonal_pricing_matrix',
-      'rental_policies_vectors',
-      'checkpoints'
-    ];
-
-    for (const t of tables) {
-      try {
-        const res = await pool.query(`SELECT COUNT(*) as c FROM ${t};`);
-        results.tableCounts[t] = res.rows[0].c;
-      } catch (e: any) {
-        results.tableCounts[t] = 'Error: ' + e.message;
-      }
+    // 3. resolveVehicleMention() tests
+    const terms = ["dassi", "peugeot 208", "golf", "clio", "asdfghjkl"];
+    results.resolutions = {};
+    for (const term of terms) {
+      results.resolutions[term] = await resolveVehicleMention(term);
     }
 
-    try {
-      const vRes = await pool.query(`SELECT vector_dims(embedding) as dim FROM rental_policies_vectors LIMIT 1;`);
-      results.vectorDims = vRes.rows.length > 0 ? vRes.rows[0].dim : 'No rows';
-    } catch (e: any) {
-      results.vectorDims = 'Error: ' + e.message;
-    }
+    // 4. PDF Generation Test
+    const agent = createAgent();
+    const initialState: KiraaState = {
+      requestId: `TEST-PDF-${Math.random().toString(36).substring(7)}`,
+      rawInput: "Test PDF generation",
+      uploadedFiles: [],
+      intent: "make_reservation",
+      intentConfidence: 1,
+      intentOverride: null,
+      params: { driverAge: 36, licenseIssueDate: "2010-01-01", vehicleId: "v1" },
+      extractedContent: {},
+      ocrConfidence: 0,
+      eligibilityResult: { 
+        eligible: false, 
+        age: 36,
+        licenseSeniorityYears: 10,
+        licenseExpired: false,
+        riskCategory: 'High',
+        needsHumanReview: false,
+        rejectionReasons: ["Testing PDF generation rejection"] 
+      },
+      priceResult: null,
+      bookingStatus: null,
+      ragPassages: [],
+      validation: {},
+      needsHumanReview: false,
+      escalationReasons: [],
+      errors: [],
+      explanation: "",
+      report: null,
+      pdfReportBase64: null,
+      graphTrace: [],
+    };
+
+    const finalState = await agent.invoke(initialState, { configurable: { thread_id: initialState.requestId } });
     
-    await pool.end();
+    if (finalState.pdfReportBase64) {
+      const buffer = Buffer.from(finalState.pdfReportBase64, 'base64');
+      results.pdfGeneration = {
+        success: true,
+        byteLength: buffer.length,
+        firstBytes: buffer.slice(0, 8).toString(), // Should be %PDF-
+      };
+    } else {
+      results.pdfGeneration = {
+        success: false,
+        error: "pdfReportBase64 is null",
+      };
+    }
+
   } catch (error: any) {
-    results.dbError = error.message;
+    results.overallError = error.message;
+    results.stack = error.stack;
   }
 
   return NextResponse.json(results);

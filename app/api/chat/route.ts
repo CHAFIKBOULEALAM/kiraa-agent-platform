@@ -117,6 +117,7 @@ export async function POST(req: NextRequest) {
       graphTrace: finalState.graphTrace,
       ragPassages: finalState.ragPassages,
       pdfReportBase64: finalState.pdfReportBase64,
+      params: finalState.params,
       ocr: {
         status: finalState.ocrConfidence > 0 ? "SUCCESS" : (hasOcrFallback ? "FALLBACK" : null),
         confidence: finalState.ocrConfidence,

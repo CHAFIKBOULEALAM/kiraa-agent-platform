@@ -25,6 +25,7 @@ export function ChatUI() {
   ]);
   const [input, setInput] = useState("");
   const [files, setFiles] = useState<File[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -269,6 +270,21 @@ export function ChatUI() {
                     )}
                   </div>
                 )}
+                
+                {/* MISSING_DETAILS Chips for the latest message */}
+                {msg.metadata?.bookingStatus === "MISSING_DETAILS" && msg.id === messages[messages.length - 1].id && msg.metadata?.params?.missingSlots && (
+                   <div className="flex flex-wrap gap-2 mt-2" data-testid="missing-slots-chips">
+                     {msg.metadata.params.missingSlots.map((slot: string, idx: number) => (
+                       <button
+                         key={idx}
+                         onClick={() => setInput(prev => prev ? `${prev} ${slot}: ` : `${slot}: `)}
+                         className="px-3 py-1.5 text-xs font-medium bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-full hover:bg-indigo-500/40 transition-colors"
+                       >
+                         Préciser {slot}
+                       </button>
+                     ))}
+                   </div>
+                )}
               </div>
             </motion.div>
           ))}
@@ -277,7 +293,21 @@ export function ChatUI() {
       </div>
 
       {/* Input Area */}
-      <div className="p-4 sm:p-6 bg-slate-900/80 backdrop-blur-xl border-t border-white/5">
+      <div 
+        className={cn(
+          "p-4 sm:p-6 bg-slate-900/80 backdrop-blur-xl border-t border-white/5 transition-colors",
+          isDragging ? "bg-indigo-900/40 border-indigo-500/50" : ""
+        )}
+        onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+        onDragLeave={() => setIsDragging(false)}
+        onDrop={(e) => {
+          e.preventDefault();
+          setIsDragging(false);
+          if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            setFiles(prev => [...prev, ...Array.from(e.dataTransfer.files)]);
+          }
+        }}
+      >
         <form onSubmit={handleSubmit} className="max-w-4xl mx-auto">
           {files.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-3 px-2">
@@ -288,14 +318,14 @@ export function ChatUI() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     key={idx}
-                    className="flex items-center gap-2 bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300"
+                    className="flex items-center gap-2 bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300 max-w-[200px]"
                   >
-                    <File className="w-3.5 h-3.5" />
-                    <span className="truncate max-w-[120px]">{file.name}</span>
+                    <File className="w-3.5 h-3.5 flex-shrink-0" />
+                    <span className="truncate flex-1">{file.name}</span>
                     <button
                       type="button"
                       onClick={() => removeFile(idx)}
-                      className="ml-1 text-slate-500 hover:text-rose-400 transition-colors"
+                      className="ml-1 text-slate-500 hover:text-rose-400 transition-colors flex-shrink-0"
                     >
                       &times;
                     </button>

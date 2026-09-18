@@ -53,6 +53,10 @@ async function seed() {
   await db.execute(sql`CREATE EXTENSION IF NOT EXISTS vector`);
   console.log("✅ pgvector extension ensured.");
 
+  // Enable pg_trgm extension for fuzzy matching
+  await db.execute(sql`CREATE EXTENSION IF NOT EXISTS pg_trgm`);
+  console.log("✅ pg_trgm extension ensured.");
+
   // 1. Seed Fleet Catalog (idempotent — skip on conflict)
   const fleetRaw = fs.readFileSync(path.join(DATA_DIR, "fleet_catalog.csv"), "utf-8");
   const fleetRecords = parse(fleetRaw, { columns: true, skip_empty_lines: true });

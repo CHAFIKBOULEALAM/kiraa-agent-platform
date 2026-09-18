@@ -24,6 +24,14 @@ export async function explainerNode(state: KiraaState): Promise<Partial<KiraaSta
     };
   }
 
+  if (state.bookingStatus === "MISSING_DETAILS") {
+    let missingList = state.params?.missingSlots || [];
+    return {
+      explanation: "Pour finaliser votre demande, veuillez préciser : " + missingList.join(", ") + ".",
+      graphTrace: [...state.graphTrace, "explainer"],
+    };
+  }
+
   // RAG retrieval ONLY for policy_query — never for pricing/eligibility/availability
   let ragPassages = state.ragPassages;
   if (state.intent === "policy_query" && ragPassages.length === 0 && state.rawInput) {
@@ -77,11 +85,17 @@ export async function explainerNode(state: KiraaState): Promise<Partial<KiraaSta
       ragPassages,
       graphTrace: [...state.graphTrace, "explainer"],
     };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Explainer LLM Error:", error);
+    let explanation = "Une erreur est survenue. Veuillez réessayer.";
+    
+    if (error?.status === 429 || error?.toString().includes("429") || error?.toString().includes("Rate limit")) {
+       explanation = "Je suis temporairement surchargé (limite de requêtes atteinte). Veuillez réessayer dans quelques instants.";
+    }
+
     return {
       errors: [...state.errors, "Failed to generate explanation."],
-      explanation: "Une erreur est survenue. Veuillez reessayer.",
+      explanation,
       ragPassages,
       graphTrace: [...state.graphTrace, "explainer"],
     };

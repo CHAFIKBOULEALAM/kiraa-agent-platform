@@ -39,7 +39,6 @@ const graphChannels = {
 
 export const agentGraph = new StateGraph<KiraaState>({ channels: graphChannels })
   .addNode("ingestor", ingestorNode as any)
-  .addNode("extractor", extractorNode as any)
   .addNode("intentDetector", intentNode as any)
   .addNode("validator", validatorNode as any)
   .addNode("calculator", calculatorNode as any)
@@ -48,15 +47,14 @@ export const agentGraph = new StateGraph<KiraaState>({ channels: graphChannels }
   
   // Linear base path
   .addEdge("__start__", "ingestor")
-  .addEdge("ingestor", "extractor")
-  .addEdge("extractor", "intentDetector")
+  .addEdge("ingestor", "intentDetector")
 
   // Conditional Routing based on intent
   .addConditionalEdges(
     "intentDetector",
     ((state: KiraaState) => {
       const intent = state.intent;
-      if (intent === "out_of_scope" || intent === "human_escalation") {
+      if (intent === "out_of_scope" || intent === "human_escalation" || state.bookingStatus === "MISSING_DETAILS") {
         return "explainer"; // Skip logic
       }
       return "validator";

@@ -1,0 +1,27 @@
+
+
+=== RUNNING SCENARIO: 1. Dassi vehicle mention ===
+
+
+=== RUNNING SCENARIO: 2. Minor driver eligibility ===
+
+
+=== RUNNING SCENARIO: 3. Expired licence ===
+
+
+=== RUNNING SCENARIO: 4. 22yo requesting Premium ===
+
+
+=== RUNNING SCENARIO: 5. Discount code SUMMER20 ===
+
+
+=== RUNNING SCENARIO: 6. Policy question ===
+
+
+=== RUNNING SCENARIO: 7. Off-topic message ===
+
+
+=== RUNNING SCENARIO: 8. Missing details ===
+
+
+=== RUNNING SCENARIO: 9. Follow-up providing dates ===

@@ -51,14 +51,25 @@ export async function reporterNode(state: KiraaState): Promise<Partial<KiraaStat
 
       doc.fontSize(20).text("Rapport d'Analyse Kiraa", { align: 'center' });
       doc.moveDown();
-      doc.fontSize(12).text(`ID Requête: ${state.requestId}`);
-      doc.text(`Intention détectée: ${state.intent}`);
+      
+      const safeRequestId = state.requestId.length > 30 ? state.requestId.substring(0, 30) + "..." : state.requestId;
+      doc.fontSize(12).text(`ID Requête: ${safeRequestId}`);
+      
+      const safeIntent = state.intent && state.intent.length > 50 ? state.intent.substring(0, 50) + "..." : (state.intent || "Inconnu");
+      doc.text(`Intention détectée: ${safeIntent}`);
       doc.moveDown();
 
       if (state.eligibilityResult) {
         doc.fontSize(16).text("Eligibilite");
         doc.fontSize(12).text(`Statut: ${state.eligibilityResult.eligible ? "Eligible" : "Rejete"}`);
         doc.text(`Age: ${state.eligibilityResult.age} ans`);
+        
+        if (state.eligibilityResult.rejectionReasons && state.eligibilityResult.rejectionReasons.length > 0) {
+           doc.text("Raisons du rejet:");
+           state.eligibilityResult.rejectionReasons.forEach(r => {
+             doc.fontSize(12).text(`- ${r}`, { width: 450, align: 'left' });
+           });
+        }
         doc.moveDown();
       }
 
@@ -74,7 +85,7 @@ export async function reporterNode(state: KiraaState): Promise<Partial<KiraaStat
       if (state.needsHumanReview) {
         doc.fontSize(16).text("Escalade Humaine Requise");
         state.escalationReasons.forEach(r => {
-          doc.fontSize(12).text(`- ${r}`);
+          doc.fontSize(12).text(`- ${r}`, { width: 450, align: 'left' });
         });
       }
 

@@ -1,0 +1,272 @@
+{
+  "1. Dassi vehicle": {
+    "requestId": "REQ-30B8D7B4",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SgRBEAbzeYp+gVv79+sdWDYQNDATJhOD85zJLrj3T2ROEeUCMemg6KaqhZiYDkJMWZVO53IpcsPu2xcUkrouUik1Fzi1c7l7FFKmNsrLFgpJTsZI3engTFu6MlzTBR2CU9Y0hLK/oc4lYdogkJ34ldpTeWjl+a+GYMKai/h3gOhngFd35VBESkY/piPsuM+LbXKPEH03M3a11d3S1fy/7rRFU2/d6NN3nRUDfX7e65VZeq8/WzAy0mNgADHSYBjJiF8tHz5JVn8KZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwMDQ5WikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyNiAwMDAwMCBuIAowMDAwMDAwODgzIDAwMDAwIG4gCjAwMDAwMDA3NjQgMDAwMDAgbiAKMDAwMDAwMDc0MyAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ2IDAwMDAwIG4gCjAwMDAwMDA1NzEgMDAwMDAgbiAKMDAwMDAwMDQ4NSAwMDAwMCBuIAowMDAwMDAwNTEwIDAwMDAwIG4gCjAwMDAwMDA1MzUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzxhNDA5NDQxMmNlMTc1ODY0YjYwYWExYTA3YjQzMTM5Nj4gPGE0MDk0NDEyY2UxNzU4NjRiNjBhYTFhMDdiNDMxMzk2Pl0KPj4Kc3RhcnR4cmVmCjkzMAolJUVPRgo=",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "2. Minor driver (19)": {
+    "requestId": "REQ-5677B4FE",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDYKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY8xTgNBDEX7OYUvkMX22P9npNUWSFDQIW2HKEKY6VLk/g3agFCiFIjGxZOt92yiorIzUWFzOZ7Kudgde1x/oIm1/WRN6JwQsp7Kw7OJq6yjvM3pMCoVg77ILlRmhivCGYYOw5GNFekaH2jbkqnMMNgi+i7rS3lay+tfDamCPSeL3wDz74BoEa7pSBqzHxjIeli2i3njkWn+WbOisjK8RiDyv27Wyen3bvTNd5kNA337vLcLq4zerlswmIwcGEAOVlQMKm5bvgBF9VaLCmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDA1NVopCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MjcgMDAwMDAgbiAKMDAwMDAwMDg4NCAwMDAwMCBuIAowMDAwMDAwNzY1IDAwMDAwIG4gCjAwMDAwMDA3NDQgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY0NyAwMDAwMCBuIAowMDAwMDAwNTcyIDAwMDAwIG4gCjAwMDAwMDA0ODYgMDAwMDAgbiAKMDAwMDAwMDUxMSAwMDAwMCBuIAowMDAwMDAwNTM2IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8ODQ4ZjY1YTEwYjU3NjZmMGEyYmNkYmIxYzJjNWI2Zjc+IDw4NDhmNjVhMTBiNTc2NmYwYTJiY2RiYjFjMmM1YjZmNz5dCj4+CnN0YXJ0eHJlZgo5MzEKJSVFT0YK",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "3. Expired licence": {
+    "requestId": "REQ-E4B47974",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SgNREEb7+xTzAlnn9/tyYUkhaGEnbCcWMe7tUuT9G9kooqQQmykOM5wzJioqOxMVdpfTuV2a3bD75QuaWN9P1oXOCSnLud09mrjKMtrLXA6jUjHoB9mlysx0RTrTsMJwYmegXPMNfVsylRkGO4i+yvLUHpb2/FdDqWDPyfI7wPwzIHumazmKxlqPTFQcD9vFvPGsMn/PikyPDEYPRv7XzZicfuvGuvmus2Ng3T5f+5UFc+0/WzBYzBoYQA0GAoOK+tXyAUU8VooKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwMTAyWikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyNiAwMDAwMCBuIAowMDAwMDAwODgzIDAwMDAwIG4gCjAwMDAwMDA3NjQgMDAwMDAgbiAKMDAwMDAwMDc0MyAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ2IDAwMDAwIG4gCjAwMDAwMDA1NzEgMDAwMDAgbiAKMDAwMDAwMDQ4NSAwMDAwMCBuIAowMDAwMDAwNTEwIDAwMDAwIG4gCjAwMDAwMDA1MzUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzxhMzc3MzQwM2FmMzkzNjJlNWNjOTFmNmI1YzA0NGJmMj4gPGEzNzczNDAzYWYzOTM2MmU1Y2M5MWY2YjVjMDQ0YmYyPl0KPj4Kc3RhcnR4cmVmCjkzMAolJUVPRgo=",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "4. 22-year-old requesting Premium": {
+    "requestId": "REQ-E5785A60",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SgRBEAbzeYp+gVv79+sdWDYQNDATJhOD85zJLrj3T2ROEeUCMemg6KaqhZiYDkJMWZVO53IpcsPu2xcUkrouUik1Fzi1c7l7FFKmNsrLFgpJTsZI3engTFu6MlzTBR2CU9Y0hLK/oc4lYdogkJ34ldpTeWjl+a+GYMKai/h3gOhngFd35VBESkY/piPsuM+LbXKPEH33sLC01cLFYPxfd9qiqbdu9Om7zoqBPj/v9cosvdefLRgZ6TEwgBhpMIxkxK+WD0JkVoUKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwMTA4WikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyNiAwMDAwMCBuIAowMDAwMDAwODgzIDAwMDAwIG4gCjAwMDAwMDA3NjQgMDAwMDAgbiAKMDAwMDAwMDc0MyAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ2IDAwMDAwIG4gCjAwMDAwMDA1NzEgMDAwMDAgbiAKMDAwMDAwMDQ4NSAwMDAwMCBuIAowMDAwMDAwNTEwIDAwMDAwIG4gCjAwMDAwMDA1MzUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzxhZjgwNmViOGRmNDc0NWNiYTZhMTdhNzQ5YjA0NTBlMD4gPGFmODA2ZWI4ZGY0NzQ1Y2JhNmExN2E3NDliMDQ1MGUwPl0KPj4Kc3RhcnR4cmVmCjkzMAolJUVPRgo=",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "5. Discount code above 15%": {
+    "requestId": "REQ-8DACCD87",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMTIKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCnicldC9SkRBDAXgfp4iL7DX/J7cgcsUghZ2wu3EYl1nui32/RuZVUTZQmwSOCTkI0JMTAchpqxKp3O5FLnJ7vevUEjqukil1FzgtJ/L3aOQMu2jvGyhkORkjNRGB2fa0pXhmi7oEJyypiGU/Q11DgnTBoE04lfan8rDXp7/MgQT1lzEvwGinwCv7sqhiJSMfkxH2LHNjW3mHiH6bqt7o6lzaWSzm5u7rZb/daQtmnrrQJ+3r7VioM8v9HrNLL3Xny6MjPQYGECMNBhGMuKX5QMliljECmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDExNVopCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MzMgMDAwMDAgbiAKMDAwMDAwMDg5MCAwMDAwMCBuIAowMDAwMDAwNzcxIDAwMDAwIG4gCjAwMDAwMDA3NTAgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY1MyAwMDAwMCBuIAowMDAwMDAwNTc4IDAwMDAwIG4gCjAwMDAwMDA0OTIgMDAwMDAgbiAKMDAwMDAwMDUxNyAwMDAwMCBuIAowMDAwMDAwNTQyIDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8NmY2OThkN2MwYzVjOGVjMDU5ZDQ5NWU1NDIwNDhjZDU+IDw2ZjY5OGQ3YzBjNWM4ZWMwNTlkNDk1ZTU0MjA0OGNkNT5dCj4+CnN0YXJ0eHJlZgo5MzcKJSVFT0YK",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "6. Pure policy question": {
+    "requestId": "REQ-E5922F26",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SkNBEEb7fYp5gVzn95ssXG4haGEnbCcWMe52KfL+jWwUSUghNlMcZjhnhJiYdkJMWZWOp3Iucsce2w8UkrpfpFJqLnBqp/LwLKRMbZS3NRSSnIyRutHOmdZ0ZbimCzoEx6xpCGX/QJ1LwrRCIBvxO7WX8tTK618NwYR9LuK/AaLfAV7dlUMRKRn9kI6wwzYv1sk9QvTTw8KqqanD1PBfd9qiqfdu9Om7zIqBPj/v9cIsvdfrFoyM9BgYQIw0GEYy4qblC0JCVoUKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwMTIxWikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyNiAwMDAwMCBuIAowMDAwMDAwODgzIDAwMDAwIG4gCjAwMDAwMDA3NjQgMDAwMDAgbiAKMDAwMDAwMDc0MyAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ2IDAwMDAwIG4gCjAwMDAwMDA1NzEgMDAwMDAgbiAKMDAwMDAwMDQ4NSAwMDAwMCBuIAowMDAwMDAwNTEwIDAwMDAwIG4gCjAwMDAwMDA1MzUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzw2YWI4MTgxNDBmMTY3MWMzM2RjNWIzZjU5MWZhZDU3MD4gPDZhYjgxODE0MGYxNjcxYzMzZGM1YjNmNTkxZmFkNTcwPl0KPj4Kc3RhcnR4cmVmCjkzMAolJUVPRgo=",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "7. Genuinely off-topic": {
+    "requestId": "REQ-B885154C",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDYKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SgRBEAbzeYp+gVv79+sdWDYQNDATJhOD85zJLrj3T2ROEeUCMemg6KaqhZiYDkJMWZVO53IpcsPu2xcUkrouUik1Fzi1c7l7FFKmNsrLFgpJTsZI3engTFu6MlzTBR2CU9Y0hLK/oc4lYdogkJ34ldpTeWjl+a+GYMKai/h3gOhngFd35VBESkY/piPsuM+LbXKPEH13tdVWCxMLc7f/utMWTb11o0/fdVYM9Pl5r1dm6b3+bMHISI+BAcRIg2EkI361fABBplaECmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDEyOFopCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MjcgMDAwMDAgbiAKMDAwMDAwMDg4NCAwMDAwMCBuIAowMDAwMDAwNzY1IDAwMDAwIG4gCjAwMDAwMDA3NDQgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY0NyAwMDAwMCBuIAowMDAwMDAwNTcyIDAwMDAwIG4gCjAwMDAwMDA0ODYgMDAwMDAgbiAKMDAwMDAwMDUxMSAwMDAwMCBuIAowMDAwMDAwNTM2IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8MWZlZWVjYzRjNTZkYjNiY2VhYTRkYWY0ZjM2ZDU2M2Y+IDwxZmVlZWNjNGM1NmRiM2JjZWFhNGRhZjRmMzZkNTYzZj5dCj4+CnN0YXJ0eHJlZgo5MzEKJSVFT0YK",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "8. Vehicle mention only (missing slots)": {
+    "requestId": "REQ-2D94393A",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SgNREEb7+xTzAlnn95sMLFsIWtgJ24lFjPd2KfL+jWwUSUghNlMcZjhnhJiYdkJMWUrHUzs3uWOP6w8UktpPUpSaE5zWU3t4FlKmdbS3ORSSnIyRutDOmeZ0ZbimCzoEx6w0hLJ/oLYlYZohkIX4ndaX9rS2178aggn7nMR/A0S/A7zclUMRKRn9kI6ww7JdzBv3CNFPU3crczMrM/+3O23S1Hs3+ua7zMJA3z7vdWGW3uu6BSMjPQYGECMNhpGMuGn5AkD2VoMKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwMTM0WikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyNiAwMDAwMCBuIAowMDAwMDAwODgzIDAwMDAwIG4gCjAwMDAwMDA3NjQgMDAwMDAgbiAKMDAwMDAwMDc0MyAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ2IDAwMDAwIG4gCjAwMDAwMDA1NzEgMDAwMDAgbiAKMDAwMDAwMDQ4NSAwMDAwMCBuIAowMDAwMDAwNTEwIDAwMDAwIG4gCjAwMDAwMDA1MzUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzw3ZTBkZTZjMWYwMTIwNGEwMmZmMGZhZGZiODM1MGYyOD4gPDdlMGRlNmMxZjAxMjA0YTAyZmYwZmFkZmI4MzUwZjI4Pl0KPj4Kc3RhcnR4cmVmCjkzMAolJUVPRgo=",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "9. Follow-up providing dates": {
+    "requestId": "REQ-2D94393A",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY+9SgNREEb7+xTzAlnn95sMLFsIWtgJ24lFjPd2KfL+jWwUSUghNlMcZjhnhJiYdkJMWUrHUzs3uWOP6w8UktpPUpSaE5zWU3t4FlKmdbS3ORSSnIyRutDOmeZ0ZbimCzoEx6w0hLJ/oLYlYZohkIX4ndaX9rS2178aggn7nMR/A0S/A7zclUMRKRn9kI6ww7JdzBv3CNFPU3crczMrM/+3O23S1Hs3+ua7zMJA3z7vdWGW3uu6BSMjPQYGECMNhpGMuGn5AkD2VoMKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjYwOTE4MDEwMTQxWikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDgyNiAwMDAwMCBuIAowMDAwMDAwODgzIDAwMDAwIG4gCjAwMDAwMDA3NjQgMDAwMDAgbiAKMDAwMDAwMDc0MyAwMDAwMCBuIAowMDAwMDAwMjA4IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNjQ2IDAwMDAwIG4gCjAwMDAwMDA1NzEgMDAwMDAgbiAKMDAwMDAwMDQ4NSAwMDAwMCBuIAowMDAwMDAwNTEwIDAwMDAwIG4gCjAwMDAwMDA1MzUgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzxmYmI3YTRhMTJmZmY1ZjEwNjVhZTc5MmZkMzllYzY3Nj4gPGZiYjdhNGExMmZmZjVmMTA2NWFlNzkyZmQzOWVjNjc2Pl0KPj4Kc3RhcnR4cmVmCjkzMAolJUVPRgo=",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  },
+  "10. PDF generation (Rejected)": {
+    "requestId": "REQ-DE447A8D",
+    "intent": "out_of_scope",
+    "explanation": "Desole, je suis un assistant specialise dans la location de vehicules. Je ne peux pas repondre a cette demande.",
+    "eligibilityResult": null,
+    "priceResult": null,
+    "bookingStatus": null,
+    "needsHumanReview": false,
+    "escalationReasons": [],
+    "errors": [
+      "Failed to determine intent."
+    ],
+    "graphTrace": [
+      "ingestor",
+      "extractor",
+      "intent",
+      "explainer",
+      "reporter"
+    ],
+    "ragPassages": [],
+    "pdfReportBase64": "JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyMDYKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclY8xTgNBDEX7OYUvkMX2fH/vSKstkKCgQ9oOUYQw06XI/Ru0ASFQCkTj4snWezZRUTmYqGRzOZ3LpdgNu9++oIm1ebIm6TkRsp3L3aOJq2yjvCzhtNRUjvRVDlBZEq6EJ4ydxlO2rAxXvLHtS6ay0Gir6KtsT+VhK89/NYQK55wM3wHmnwFogGs4Iy2jHxOMelz3i2XniDB/BxAVFTVhdQb+6846efqtm333XWfjYN8/7+3KaqK3ny0cGYkYHGSMrKwcqYxfLR9DalaHCmVuZHN0cmVhbQplbmRvYmoKMTAgMCBvYmoKKFBERktpdCkKZW5kb2JqCjExIDAgb2JqCihQREZLaXQpCmVuZG9iagoxMiAwIG9iagooRDoyMDI2MDkxODAxMDE0N1opCmVuZG9iago5IDAgb2JqCjw8Ci9Qcm9kdWNlciAxMCAwIFIKL0NyZWF0b3IgMTEgMCBSCi9DcmVhdGlvbkRhdGUgMTIgMCBSCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwo+PgplbmRvYmoKNCAwIG9iago8PAo+PgplbmRvYmoKMyAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL05hbWVzIDIgMCBSCj4+CmVuZG9iagoxIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbNyAwIFJdCj4+CmVuZG9iagoyIDAgb2JqCjw8Ci9EZXN0cyA8PAogIC9OYW1lcyBbCl0KPj4KPj4KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDA4MjcgMDAwMDAgbiAKMDAwMDAwMDg4NCAwMDAwMCBuIAowMDAwMDAwNzY1IDAwMDAwIG4gCjAwMDAwMDA3NDQgMDAwMDAgbiAKMDAwMDAwMDIwOCAwMDAwMCBuIAowMDAwMDAwMTE5IDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDY0NyAwMDAwMCBuIAowMDAwMDAwNTcyIDAwMDAwIG4gCjAwMDAwMDA0ODYgMDAwMDAgbiAKMDAwMDAwMDUxMSAwMDAwMCBuIAowMDAwMDAwNTM2IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgMTMKL1Jvb3QgMyAwIFIKL0luZm8gOSAwIFIKL0lEIFs8NWEzODBjNjAzOWUwYTk5MTg2ZTNkMzkzZTBjOWE4ZWE+IDw1YTM4MGM2MDM5ZTBhOTkxODZlM2QzOTNlMGM5YThlYT5dCj4+CnN0YXJ0eHJlZgo5MzEKJSVFT0YK",
+    "ocr": {
+      "status": null,
+      "confidence": 0,
+      "mode": "native"
+    }
+  }
+}
