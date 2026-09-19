@@ -72,27 +72,7 @@ export async function POST(req: NextRequest) {
       graphTrace: [],
     };
 
-    // --- E2E_TEST_MODE DETERMINISTIC ROUTING ---
-    if (process.env.E2E_TEST_MODE === "true") {
-      console.warn("⚠️ E2E_TEST_MODE is enabled. Using deterministic server-side intent routing.");
-      if (message.includes("Quelles sont les conditions")) {
-        initialState.intentOverride = "policy_query";
-      } else if (message.includes("louer ce véhicule premium") || message.includes("FLASH") || message.includes("Confirme ma réservation")) {
-        initialState.intentOverride = "make_reservation";
-        if (message.includes("FLASH")) {
-          initialState.params = {
-            ...initialState.params,
-            category: "Economy",
-            days: 5,
-            baseDailyRate: 300,
-            discountCode: "FLASH25"
-          };
-        }
-      } else if (message.includes("Bonjour") || message.includes("Hello") || message.includes("Voici mes documents") || message.includes("Analyse") || message.includes("Ignore toutes les instructions")) {
-        initialState.intentOverride = "out_of_scope";
-      }
-    }
-    // -------------------------------------------
+
 
     // Compile and run the real LangGraph agent
     const agent = createAgent();

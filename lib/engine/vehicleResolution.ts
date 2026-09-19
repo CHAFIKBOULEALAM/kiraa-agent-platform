@@ -6,6 +6,8 @@ export interface VehicleMatch {
   vehicleId: string;
   make: string;
   model: string;
+  category: string;
+  baseDailyRate: number;
   similarity: number;
 }
 
@@ -17,9 +19,9 @@ export async function resolveVehicleMention(userText: string): Promise<VehicleMa
   // If the user didn't mention anything specific, skip.
   if (!userText || userText.trim() === "") return null;
 
-  // We use pg_trgm's similarity function against a concatenation of make and model.
+  // We use pg_trgm's similarity function against a concatenation of make and model, as well as just model.
   const query = sql`
-    SELECT vehicle_id, make, model, similarity(make || ' ' || model, ${userText}) as sim
+    SELECT vehicle_id, make, model, category, base_daily_rate, GREATEST(similarity(make || ' ' || model, ${userText}), similarity(model, ${userText})) as sim
     FROM ${fleetCatalog}
     ORDER BY sim DESC
     LIMIT 1;
@@ -33,12 +35,14 @@ export async function resolveVehicleMention(userText: string): Promise<VehicleMa
   // Convert similarity to a number (Postgres driver might return string or number depending on config)
   const simScore = typeof bestMatch.sim === "string" ? parseFloat(bestMatch.sim) : bestMatch.sim;
 
-  // We define a threshold for fuzzy matching. 0.35 is generally good for trigrams.
-  if (simScore >= 0.3) {
+  // We define a threshold for fuzzy matching. 0.25 is generally good for trigrams, allowing partial model names.
+  if (simScore >= 0.25) {
     return {
       vehicleId: bestMatch.vehicle_id,
       make: bestMatch.make,
       model: bestMatch.model,
+      category: bestMatch.category,
+      baseDailyRate: typeof bestMatch.base_daily_rate === "string" ? parseFloat(bestMatch.base_daily_rate) : bestMatch.base_daily_rate,
       similarity: simScore,
     };
   }

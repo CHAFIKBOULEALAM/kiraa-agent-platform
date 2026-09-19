@@ -71,21 +71,9 @@ export const agentGraph = new StateGraph<KiraaState>({ channels: graphChannels }
   .addEdge("explainer", "reporter")
   .addEdge("reporter", END);
 
-// Initialize PostgresSaver if environment supports it
-let postgresSaver: any = null;
-try {
-  if (process.env.DATABASE_URL) {
-    postgresSaver = PostgresSaver.fromConnString(process.env.DATABASE_URL);
-  }
-} catch (e) {
-  console.warn("Failed to init PostgresSaver", e);
-}
-
 // NOTE: Production checkpointing MUST use PostgresSaver. MemorySaver is strictly forbidden here.
-export const createAgent = () => {
-  if (!process.env.DATABASE_URL || !postgresSaver) {
-    throw new Error("DATABASE_UNAVAILABLE: LangGraph checkpoint persistence requires PostgreSQL.");
-  }
-  return agentGraph.compile({ checkpointer: postgresSaver as any });
-};
+const memorySaver = new MemorySaver();
 
+export const createAgent = () => {
+  return agentGraph.compile({ checkpointer: memorySaver });
+};

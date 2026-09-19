@@ -26,7 +26,7 @@ services:
     environment:
       DATABASE_URL: postgresql://kiraa:kiraa@db:5432/kiraa
       GROQ_API_KEY: ${GROQ_API_KEY}
-      GROQ_MODEL: qwen/qwen3.8-27b
+      GROQ_MODEL: openai/gpt-oss-20b
       E2E_TEST_MODE: "true"
       NODE_ENV: production
     depends_on:

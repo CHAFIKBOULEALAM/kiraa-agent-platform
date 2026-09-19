@@ -31,15 +31,18 @@ export async function reporterNode(state: KiraaState): Promise<Partial<KiraaStat
     report += `**Total à payer: ${state.priceResult.totalPrice} MAD**\n\n`;
   }
 
-  if (state.needsHumanReview) {
+  let bookingStatus: "CONFIRMED" | "PENDING_REVIEW" | "MISSING_DETAILS" | null = null;
+  if (state.intent === "human_escalation" || state.needsHumanReview) {
     report += `## ⚠️ Escalade Humaine Requise\n`;
     report += state.escalationReasons.map(r => `- ${r}`).join("\n") + "\n\n";
+    bookingStatus = "PENDING_REVIEW";
   }
 
-  // Generate PDF
+  // Generate PDF only for eligible complete reservations
   let pdfReportBase64 = null;
-  try {
-    pdfReportBase64 = await new Promise<string>((resolve, reject) => {
+  if (state.intent === "make_reservation" && state.eligibilityResult?.eligible && state.priceResult) {
+    try {
+      pdfReportBase64 = await new Promise<string>((resolve, reject) => {
       const doc = new PDFDocument({ margin: 50 });
       const buffers: Buffer[] = [];
       doc.on('data', buffers.push.bind(buffers));
@@ -90,14 +93,16 @@ export async function reporterNode(state: KiraaState): Promise<Partial<KiraaStat
       }
 
       doc.end();
-    });
-  } catch (err) {
-    console.error("Failed to generate PDF:", err);
+      });
+    } catch (err) {
+      console.error("Failed to generate PDF:", err);
+    }
   }
 
   return {
     report,
     pdfReportBase64,
+    bookingStatus,
     graphTrace: [...state.graphTrace, "reporter"],
   };
 }

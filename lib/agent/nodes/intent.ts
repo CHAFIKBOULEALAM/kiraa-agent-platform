@@ -24,7 +24,7 @@ const IntentOutputSchema = z.object({
     discountCode: z.string().nullable().optional().describe("Any discount code mentioned"),
     name: z.string().nullable().optional(),
     idNumber: z.string().nullable().optional(),
-  }).strict().default({}),
+  }).strict().nullable().optional().default({}),
 }).strict();
 
 const groqModel = new ChatGroq({
@@ -34,6 +34,7 @@ const groqModel = new ChatGroq({
 
 const intentModel = groqModel.withStructuredOutput(IntentOutputSchema, {
   name: "determine_intent",
+  strict: true,
 });
 
 export async function intentNode(state: KiraaState): Promise<Partial<KiraaState>> {
@@ -109,6 +110,8 @@ If the user is asking to rent, book, or mentions a vehicle with rental intent, r
           finalParams.vehicleId = match.vehicleId;
           finalParams.make = match.make;
           finalParams.model = match.model;
+          finalParams.category = match.category;
+          finalParams.baseDailyRate = match.baseDailyRate;
        } else {
           finalParams.unresolvedVehicle = response.extractedParams.vehicleName;
           delete finalParams.vehicleId;
@@ -130,9 +133,16 @@ If the user is asking to rent, book, or mentions a vehicle with rental intent, r
           finalParams.missingSlots = missingSlots;
        } else {
           bookingStatus = "READY_FOR_CALCULATION";
-          if (finalParams.driverAge && !finalParams.birthDate) {
+           if (finalParams.driverAge && !finalParams.birthDate) {
              const year = new Date().getFullYear() - finalParams.driverAge;
              finalParams.birthDate = `${year}-01-01`;
+          }
+          if (finalParams.startDate && finalParams.endDate) {
+             const start = new Date(finalParams.startDate);
+             const end = new Date(finalParams.endDate);
+             const diffTime = Math.abs(end.getTime() - start.getTime());
+             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+             finalParams.days = diffDays > 0 ? diffDays : 1;
           }
        }
     }

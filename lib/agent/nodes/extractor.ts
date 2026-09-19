@@ -9,6 +9,7 @@ const groqModel = new ChatGroq({
 
 const extractionModel = groqModel.withStructuredOutput(DriverLicenseSchema, {
   name: "extract_driver_license",
+  strict: true,
 });
 
 export async function extractorNode(state: KiraaState): Promise<Partial<KiraaState>> {

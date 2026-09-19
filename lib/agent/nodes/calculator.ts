@@ -9,6 +9,7 @@ export async function calculatorNode(state: KiraaState): Promise<Partial<KiraaSt
   let escalationReasons = [...state.escalationReasons];
 
   if (state.intent === "calculate_total_cost" || state.intent === "make_reservation") {
+    console.log(`[Calculator] Check params: baseDailyRate=${state.params.baseDailyRate}, days=${state.params.days}, category=${state.params.category}`);
     // Requires base params
     if (state.params.baseDailyRate && state.params.days && state.params.category) {
       const res = calculateTotalPrice({

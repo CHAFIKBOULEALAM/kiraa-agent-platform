@@ -4,4 +4,16 @@
 
 ▲ Next.js 16.3.5 (Turbopack)
 - Environments: .env
-✓ Running next.config.ts took 4.6s
+⚠ Warning: Next.js ignored package-lock.json in C:\Users\ACER because it is outside the current Git repository (C:\Users\ACER\OneDrive - usmba.ac.ma\Documents\chafik\ESISA\3éme années\machine learning-salma\hackaton\dossier-hackhaton-v2\notebook-tutorial\Kiraa-project).
+ To use this directory, set `turbopack.root` in your Next.js config.
+
+✓ Running next.config.ts took 4.3s
+
+> Build error occurred
+Error: EPERM: operation not permitted, unlink 'C:\Users\ACER\OneDrive - usmba.ac.ma\Documents\chafik\ESISA\3éme années\machine learning-salma\hackaton\dossier-hackhaton-v2\notebook-tutorial\Kiraa-project\.next\server\chunks\ssr'
+    at ignore-listed frames {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'unlink',
+  path: 'C:\\Users\\ACER\\OneDrive - usmba.ac.ma\\Documents\\chafik\\ESISA\\3éme années\\machine learning-salma\\hackaton\\dossier-hackhaton-v2\\notebook-tutorial\\Kiraa-project\\.next\\server\\chunks\\ssr'
+}

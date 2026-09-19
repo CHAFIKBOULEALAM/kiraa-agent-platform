@@ -183,6 +183,7 @@ export function ChatUI() {
                 )}
 
                 <div
+                  data-testid={msg.role === "bot" ? "agent-response" : "user-message"}
                   className={cn(
                     "px-5 py-4 rounded-3xl shadow-sm leading-relaxed whitespace-pre-wrap text-[15px]",
                     msg.role === "user"
@@ -358,6 +359,7 @@ export function ChatUI() {
               </button>
               
               <textarea
+                data-testid="chat-input"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Posez votre question ou uploadez vos documents..."

@@ -5,15 +5,17 @@ import { Client } from 'pg';
 
 test.describe('Multi-turn conversation continuity', () => {
   test('reproduces the screenshot bug step by step', async ({ page, request }, testInfo) => {
+    test.setTimeout(3000000); // 2 minutes for slow LLM responses
     // Phase 7B - Step 1: Load the chat page
     await page.goto('/');
     await expect(page).toHaveTitle(/Kiraa/i);
 
     let threadId = '';
-    const responsePromise = page.waitForResponse(response => response.url().includes('/api/chat') && response.status() === 200);
+    const responsePromise = page.waitForResponse(response => response.url().includes('/api/chat') && response.status() === 200, { timeout: 3000000 });
 
     // Step 2: Type "je voudrais une voiture dassi pendant 2 jours" and send
-    await page.fill('textarea', 'je voudrais une voiture dassi pendant 2 jours');
+    await page.locator('[data-testid="chat-input"]').pressSequentially( 'je voudrais une voiture dassi pendant 2 jours', { delay: 80 });
+    await page.waitForTimeout(500);
     await page.keyboard.press('Enter');
 
     const resApi = await responsePromise;
@@ -21,12 +23,12 @@ test.describe('Multi-turn conversation continuity', () => {
     threadId = data.requestId;
     console.log('Intercepted Thread ID:', threadId);
     
-    // Wait for the assistant response to render
-    await expect(page.locator('.prose').last()).not.toBeEmpty();
-    // Use an explicit wait for the response to stabilize (loading spinner gone)
-    await expect(page.locator('.lucide-loader2')).toHaveCount(0, { timeout: 30000 });
+    // Use an explicit wait for the response to stabilize
+    await expect(page.locator('[data-testid="agent-response"]').last()).toBeVisible({ timeout: 30000 });
+    // Wait for the loader to disappear inside the response (isThinking = false)
+    await expect(page.locator('[data-testid="agent-response"]').last().locator('.lucide-loader2')).toHaveCount(0);
     
-    let lastResponse = await page.locator('.prose').last().innerText();
+    let lastResponse = await page.locator('[data-testid="agent-response"]').last().innerText();
     console.log('Step 2 Response:', lastResponse);
     
     await expect(lastResponse).not.toContain('Desole, je suis un assistant specialise');
@@ -46,13 +48,19 @@ test.describe('Multi-turn conversation continuity', () => {
 
     await page.waitForTimeout(500);
 
+    const responsePromise3 = page.waitForResponse(response => response.url().includes('/api/chat') && response.status() === 200, { timeout: 3000000 });
+
     // Step 3: Type "Dassia" and send
-    await page.fill('textarea', 'Dassia');
+    await page.locator('[data-testid="chat-input"]').pressSequentially( 'Dassia', { delay: 80 });
+    await page.waitForTimeout(500);
     await page.keyboard.press('Enter');
     
     // Wait for the response
-    await expect(page.locator('.lucide-loader2')).toHaveCount(0, { timeout: 30000 });
-    lastResponse = await page.locator('.prose').last().innerText();
+    await responsePromise3;
+    await expect(page.locator('[data-testid="agent-response"]').last()).toBeVisible({ timeout: 30000 });
+    await expect(page.locator('[data-testid="agent-response"]').last().locator('.lucide-loader2')).toHaveCount(0);
+
+    lastResponse = await page.locator('[data-testid="agent-response"]').last().innerText();
     console.log('Step 3 Response:', lastResponse);
     
     await expect(lastResponse).not.toContain('Desole, je suis un assistant specialise');
@@ -68,12 +76,18 @@ test.describe('Multi-turn conversation continuity', () => {
     console.log(`Step 3 DB Checkpoints for ${threadId}: ${count2}`);
     expect(count2).toBeGreaterThan(count1);
 
+    const responsePromise4 = page.waitForResponse(response => response.url().includes('/api/chat') && response.status() === 200, { timeout: 3000000 });
+
     // Step 4: Type "ok c'est voila tarif 5000 dh" and send
-    await page.fill('textarea', "ok c'est voila tarif 5000 dh");
+    await page.locator('[data-testid="chat-input"]').pressSequentially( "ok c'est voila tarif 5000 dh", { delay: 80 });
+    await page.waitForTimeout(500);
     await page.keyboard.press('Enter');
     
-    await expect(page.locator('.lucide-loader2')).toHaveCount(0, { timeout: 30000 });
-    lastResponse = await page.locator('.prose').last().innerText();
+    await responsePromise4;
+    await expect(page.locator('[data-testid="agent-response"]').last()).toBeVisible({ timeout: 30000 });
+    await expect(page.locator('[data-testid="agent-response"]').last().locator('.lucide-loader2')).toHaveCount(0);
+
+    lastResponse = await page.locator('[data-testid="agent-response"]').last().innerText();
     console.log('Step 4 Response:', lastResponse);
     
     await expect(lastResponse).not.toContain('Desole, je suis un assistant specialise');
@@ -88,12 +102,18 @@ test.describe('Multi-turn conversation continuity', () => {
     console.log(`Step 4 DB Checkpoints for ${threadId}: ${count3}`);
     expect(count3).toBeGreaterThan(count2);
 
+    const responsePromise5 = page.waitForResponse(response => response.url().includes('/api/chat') && response.status() === 200, { timeout: 3000000 });
+
     // Step 5: Type "i have already told you" and send
-    await page.fill('textarea', 'i have already told you');
+    await page.locator('[data-testid="chat-input"]').pressSequentially( 'i have already told you', { delay: 80 });
+    await page.waitForTimeout(500);
     await page.keyboard.press('Enter');
     
-    await expect(page.locator('.lucide-loader2')).toHaveCount(0, { timeout: 30000 });
-    lastResponse = await page.locator('.prose').last().innerText();
+    await responsePromise5;
+    await expect(page.locator('[data-testid="agent-response"]').last()).toBeVisible({ timeout: 30000 });
+    await expect(page.locator('[data-testid="agent-response"]').last().locator('.lucide-loader2')).toHaveCount(0);
+
+    lastResponse = await page.locator('[data-testid="agent-response"]').last().innerText();
     console.log('Step 5 Response:', lastResponse);
     
     await expect(lastResponse).not.toContain('Desole, je suis un assistant specialise');
